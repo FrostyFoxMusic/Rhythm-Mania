@@ -1,0 +1,43 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": ".NET Core Launch (console)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/bin/Debug/<insert-target-framework-here>/<insert-project-name-here>.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopAtEntry": false
+        },
+        {
+            "name": ".NET Core Attach",
+            "type": "coreclr",
+            "request": "attach"
+        },
+        {
+            "name": "Launch",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "/home/slipper/System/applications/godot/godot.x86_64",
+			"env": {
+				/*"DRI_PRIME": "1",
+				"__NV_PRIME_RENDER_OFFLOAD": "1",
+				"__VK_LAYER_NV_optimus": "NVIDIA_only",
+				"__GLX_VENDOR_LIBRARY_NAME": "nvidia"*/
+			},
+			"args": [
+				"--verbose"
+				//"/home/slipper/Pictures/966955388815687750.png"
+			],
+            "console": "internalConsole",
+            "stopAtEntry": false
+        }
+    ]
+}
