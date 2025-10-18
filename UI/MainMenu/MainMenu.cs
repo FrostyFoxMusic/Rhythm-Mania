@@ -1,7 +1,9 @@
 using Godot;
-using System;
+using RhythmMania.Base;
 
-public partial class StoryModeButton : Button
+namespace RhythmMania.UI.MainMenu;
+
+public partial class MainMenu : Node
 {
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
@@ -13,9 +15,6 @@ public partial class StoryModeButton : Button
 	{
 	}
 
-	public override void _Pressed()
-	{
-		base._Pressed();
-		GetParent<MainMenu>().CloseMenu();
-	}
+	public void Close() =>
+		Main.CloseMainMenu();
 }

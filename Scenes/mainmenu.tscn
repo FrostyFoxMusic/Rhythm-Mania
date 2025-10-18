@@ -1,33 +1,119 @@
-[gd_scene load_steps=3 format=3 uid="uid://dpjyscxejacub"]
+[gd_scene load_steps=6 format=3 uid="uid://dpjyscxejacub"]
 
-[ext_resource type="Script" uid="uid://ch7gkbe3ep8wh" path="res://Scripts/MainMenu.cs" id="1_web8u"]
-[ext_resource type="Script" uid="uid://cttwbkf4rdryx" path="res://Scripts/StoryModeButton.cs" id="2_rtnl3"]
+[ext_resource type="Script" uid="uid://ch7gkbe3ep8wh" path="res://UI/MainMenu/MainMenu.cs" id="1_rtnl3"]
+[ext_resource type="Texture2D" uid="uid://c8v4oyp21qnw" path="res://UI/MainMenuBg.png" id="2_lah54"]
+[ext_resource type="Script" uid="uid://cttwbkf4rdryx" path="res://UI/MainMenu/StoryModeButton.cs" id="2_v4pkt"]
+[ext_resource type="Texture2D" uid="uid://dbcn8queu34dq" path="res://icon.png" id="3_5326e"]
+[ext_resource type="Script" uid="uid://hi4lie8do1i0" path="res://UI/MainMenu/QuitButton.cs" id="3_lah54"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 60.0
-offset_top = 94.0
-offset_right = 60.0
-offset_bottom = 94.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_web8u")
+script = ExtResource("1_rtnl3")
 
-[node name="Button" type="Button" parent="."]
+[node name="Background_TextureRect" type="TextureRect" parent="."]
+texture_filter = 2
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -50.0
-offset_top = 69.0
-offset_right = 47.0
-offset_bottom = 100.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 23.85
+texture = ExtResource("2_lah54")
+expand_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 40
+alignment = 1
+
+[node name="Title_HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 40
+alignment = 1
+
+[node name="Spacer" type="Control" parent="VBoxContainer/Title_HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Logo" type="Control" parent="VBoxContainer/Title_HBoxContainer"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/Title_HBoxContainer/Logo"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+texture = ExtResource("3_5326e")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Title_Label" type="Label" parent="VBoxContainer/Title_HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 100
+text = "Rhythm Mania"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Spacer2" type="Control" parent="VBoxContainer/Title_HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Spacer" type="Control" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="StoryMode_Button" type="Button" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
 text = "Story Mode"
-script = ExtResource("2_rtnl3")
+script = ExtResource("2_v4pkt")
+
+[node name="LevelSelect_Button" type="Button" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Level Select
+"
+script = ExtResource("2_v4pkt")
+
+[node name="Options_Button" type="Button" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Options
+"
+script = ExtResource("2_v4pkt")
+
+[node name="Credits_Button" type="Button" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Credits
+"
+script = ExtResource("2_v4pkt")
+
+[node name="Quit_Button" type="Button" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Quit"
+script = ExtResource("3_lah54")
+
+[node name="Spacer2" type="Control" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
