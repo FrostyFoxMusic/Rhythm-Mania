@@ -16,5 +16,5 @@ public partial class MainMenu : Node
 	}
 
 	public void Close() =>
-		Main.CloseMainMenu();
+		Main.DisposeMainMenu();
 }

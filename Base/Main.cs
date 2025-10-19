@@ -1,6 +1,7 @@
 using System;
 using Godot;
 using RhythmMania.UI.MainMenu;
+using RhythmMania.Game;
 
 namespace RhythmMania.Base;
 
@@ -15,23 +16,46 @@ public partial class Main : Node
 	private bool IsMainMenuOpen { get; set; } = false;
 	public MainMenu MainMenu { get; private set; }
 
+	[Export] private PackedScene levelScene;
+	private bool IsLevelLoaded { get; set; } = false;
+	public Level Level { get; private set; }
 
 	public override void _Ready()
 	{
 		Current = this;
 		CanvasLayer = GetChild<CanvasLayer>(0);
 
-		OpenMainMenu();
+		LoadMainMenu();
 		MainReady?.Invoke();
 	}
 
 	public override void _Input(InputEvent e)
 	{
 		if (e is InputEventKey keyEvent && keyEvent.IsPressed() && keyEvent.Keycode == Key.Escape)
-			OpenMainMenu();
+			LoadMainMenu();
 	}
 
-	public static void OpenMainMenu()
+	public static void LoadLevel()
+	{
+		if (Current.IsLevelLoaded)
+			return;
+
+		Current.Level = Current.levelScene.Instantiate<Level>();
+		Current.CanvasLayer.AddChild(Current.Level);
+		Current.IsLevelLoaded = true;
+	}
+
+	public static void DisposeLevel()
+	{
+		if (!Current.IsLevelLoaded)
+			return;
+
+		Current.IsLevelLoaded = false;
+		Current.Level.QueueFree();
+		Current.Level = null;
+	}
+
+	public static void LoadMainMenu()
 	{
 		if (Current.IsMainMenuOpen)
 			return;
@@ -41,7 +65,7 @@ public partial class Main : Node
 		Current.IsMainMenuOpen = true;
 	}
 
-	public static void CloseMainMenu()
+	public static void DisposeMainMenu()
 	{
 		if (!Current.IsMainMenuOpen)
 			return;

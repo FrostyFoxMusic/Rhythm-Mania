@@ -1,24 +1,21 @@
 using Godot;
-using RhythmMania.Extensions;
+using RhythmMania.Base;
+//using RhythmMania.Extensions;
 
 namespace RhythmMania.UI.MainMenu;
 
 public partial class StoryModeButton : Button
 {
-	private MainMenu MainMenu { get; set; }
+	//private MainMenu MainMenu { get; set; }
 
 	public override void _Ready()
 	{
-		MainMenu = this.GetParentRecursive<MainMenu>();
-	}
-
-	public override void _Process(double delta)
-	{
-		
+		//MainMenu = this.GetParentRecursive<MainMenu>();
 	}
 
 	public override void _Pressed()
 	{
-		MainMenu.Close();
+		Main.DisposeMainMenu();
+		Main.LoadLevel();
 	}
 }
