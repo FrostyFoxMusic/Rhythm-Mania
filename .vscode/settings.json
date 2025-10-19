@@ -63,7 +63,8 @@
 		".godot": true,
 		"**/*.uid": true,
 		"**/%USERPROFILE%": true,
-		"**/*.import": true
+		"**/*.import": true,
+		"**/.gitattributes": true
 	},
     "explorerExclude.backup": {},
     "editor.insertSpaces": false,
