@@ -41,6 +41,7 @@
 		"Streamrepresentation",
 		"tpascalcase",
 		"URGB",
+		"USERPROFILE",
 		"warrengalyen",
 		"zack"
 	],
@@ -56,11 +57,13 @@
 		"**/.git": true,
 		"**/.svn": false,
 		"**/.hg": false,
-		"**/CVS": false,
 		"**/.DS_Store": false,
 		"**/Thumbs.db": false,
+		"**/CVS": false,
 		".godot": true,
-		"**/*.uid": true
+		"**/*.uid": true,
+		"**/%USERPROFILE%": true,
+		"**/*.import": true
 	},
     "explorerExclude.backup": {},
     "editor.insertSpaces": false,
