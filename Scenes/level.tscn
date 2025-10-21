@@ -1,22 +1,38 @@
-[gd_scene load_steps=5 format=3 uid="uid://c3yoan7c41rgj"]
+[gd_scene load_steps=7 format=3 uid="uid://c3yoan7c41rgj"]
 
 [ext_resource type="Script" uid="uid://c0xrelu1bxfc0" path="res://Player/Player.cs" id="1_6phgx"]
 [ext_resource type="Script" uid="uid://6c5vth264ool" path="res://Game/Level.cs" id="1_81xng"]
 [ext_resource type="Texture2D" uid="uid://chma21ci5tcvd" path="res://Sprites/Character/char_base.png" id="1_tumq0"]
 [ext_resource type="Script" uid="uid://d2xrs4taud776" path="res://Player/Controller.cs" id="2_81xng"]
+[ext_resource type="PackedScene" uid="uid://c823tjau7tklf" path="res://Game/Environment/block.tscn" id="5_wqkje"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wqkje"]
+radius = 61.33
+height = 251.55
 
 [node name="Level" type="Node2D"]
 script = ExtResource("1_81xng")
 
 [node name="Camera" type="Camera2D" parent="."]
 
-[node name="Player" type="Node2D" parent="."]
-position = Vector2(500, 250)
+[node name="Player" type="CharacterBody2D" parent="."]
 scale = Vector2(0.5, 0.5)
 script = ExtResource("1_6phgx")
+speed = 150.0
+jumpForce = 50.0
+gravity = 3.0
+xDrag = 0.2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+shape = SubResource("CapsuleShape2D_wqkje")
 
 [node name="Controller" type="Node2D" parent="Player"]
 script = ExtResource("2_81xng")
+speed = 0.0
 
 [node name="Sprite2D" type="Sprite2D" parent="Player"]
 texture = ExtResource("1_tumq0")
+
+[node name="Block" parent="." instance=ExtResource("5_wqkje")]
+position = Vector2(6, 249)
+scale = Vector2(25, 1)

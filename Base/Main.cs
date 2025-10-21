@@ -41,7 +41,7 @@ public partial class Main : Node
 			return;
 
 		Current.Level = Current.levelScene.Instantiate<Level>();
-		Current.CanvasLayer.AddChild(Current.Level);
+		Current.AddChild(Current.Level);
 		Current.IsLevelLoaded = true;
 	}
 
