@@ -47,5 +47,10 @@ public partial class Player : CharacterBody2D
 			if (Velocity.Y == 0)
 				IsGrounded = true;
 		}
+		if (Position.Y > 1000)
+		{
+			Position = Vector2.Zero;
+		}
+
 	}
 }

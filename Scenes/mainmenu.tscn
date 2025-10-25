@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dbcn8queu34dq" path="res://icon.png" id="3_5326e"]
 [ext_resource type="Script" uid="uid://hi4lie8do1i0" path="res://UI/MainMenu/QuitButton.cs" id="3_lah54"]
 
-[node name="MainMenu" type="Control"]
+[node name="MainMenu" type="Control" unique_id=696784492]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -15,7 +15,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_rtnl3")
 
-[node name="Background_TextureRect" type="TextureRect" parent="."]
+[node name="Background_TextureRect" type="TextureRect" parent="." unique_id=925875385]
 texture_filter = 2
 layout_mode = 1
 anchors_preset = 15
@@ -28,7 +28,7 @@ size_flags_stretch_ratio = 23.85
 texture = ExtResource("2_lah54")
 expand_mode = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1116181724]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -38,21 +38,21 @@ grow_vertical = 2
 theme_override_constants/separation = 40
 alignment = 1
 
-[node name="Title_HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+[node name="Title_HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=963831331]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_constants/separation = 40
 alignment = 1
 
-[node name="Spacer" type="Control" parent="VBoxContainer/Title_HBoxContainer"]
+[node name="Spacer" type="Control" parent="VBoxContainer/Title_HBoxContainer" unique_id=1728370741]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Logo" type="Control" parent="VBoxContainer/Title_HBoxContainer"]
+[node name="Logo" type="Control" parent="VBoxContainer/Title_HBoxContainer" unique_id=293876655]
 custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="VBoxContainer/Title_HBoxContainer/Logo"]
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/Title_HBoxContainer/Logo" unique_id=1571139367]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -64,8 +64,9 @@ texture = ExtResource("3_5326e")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Title_Label" type="Label" parent="VBoxContainer/Title_HBoxContainer"]
+[node name="Title_Label" type="Label" parent="VBoxContainer/Title_HBoxContainer" unique_id=805149525]
 layout_mode = 2
+mouse_filter = 1
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.19607843)
 theme_override_colors/font_outline_color = Color(0.37254903, 0.21960784, 0.8, 1)
 theme_override_constants/shadow_offset_x = 10
@@ -76,49 +77,46 @@ text = "Rhythm Mania"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Spacer2" type="Control" parent="VBoxContainer/Title_HBoxContainer"]
+[node name="Spacer2" type="Control" parent="VBoxContainer/Title_HBoxContainer" unique_id=2022432545]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=1274479894]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Spacer" type="Control" parent="VBoxContainer/HBoxContainer"]
+[node name="Spacer" type="Control" parent="VBoxContainer/HBoxContainer" unique_id=967158839]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer" unique_id=2005818893]
 layout_mode = 2
 
-[node name="StoryMode_Button" type="Button" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
+[node name="StoryMode_Button" type="Button" parent="VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1059606910]
 layout_mode = 2
 text = "Story Mode"
 script = ExtResource("2_v4pkt")
 
-[node name="LevelSelect_Button" type="Button" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
+[node name="LevelSelect_Button" type="Button" parent="VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1122378079]
 layout_mode = 2
 text = "Level Select
 "
-script = ExtResource("2_v4pkt")
 
-[node name="Options_Button" type="Button" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
+[node name="Options_Button" type="Button" parent="VBoxContainer/HBoxContainer/VBoxContainer" unique_id=2085454824]
 layout_mode = 2
 text = "Options
 "
-script = ExtResource("2_v4pkt")
 
-[node name="Credits_Button" type="Button" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
+[node name="Credits_Button" type="Button" parent="VBoxContainer/HBoxContainer/VBoxContainer" unique_id=23687828]
 layout_mode = 2
 text = "Credits
 "
-script = ExtResource("2_v4pkt")
 
-[node name="Quit_Button" type="Button" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
+[node name="Quit_Button" type="Button" parent="VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1580221160]
 layout_mode = 2
 text = "Quit"
 script = ExtResource("3_lah54")
 
-[node name="Spacer2" type="Control" parent="VBoxContainer/HBoxContainer"]
+[node name="Spacer2" type="Control" parent="VBoxContainer/HBoxContainer" unique_id=399075732]
 layout_mode = 2
 size_flags_horizontal = 3
