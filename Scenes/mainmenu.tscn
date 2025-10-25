@@ -101,19 +101,16 @@ script = ExtResource("2_v4pkt")
 layout_mode = 2
 text = "Level Select
 "
-script = ExtResource("2_v4pkt")
 
 [node name="Options_Button" type="Button" parent="VBoxContainer/HBoxContainer/VBoxContainer" unique_id=2085454824]
 layout_mode = 2
 text = "Options
 "
-script = ExtResource("2_v4pkt")
 
 [node name="Credits_Button" type="Button" parent="VBoxContainer/HBoxContainer/VBoxContainer" unique_id=23687828]
 layout_mode = 2
 text = "Credits
 "
-script = ExtResource("2_v4pkt")
 
 [node name="Quit_Button" type="Button" parent="VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1580221160]
 layout_mode = 2
