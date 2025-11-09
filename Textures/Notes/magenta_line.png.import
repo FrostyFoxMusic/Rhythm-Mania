@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b8ek43gtdgfwy"
-path="res://.godot/imported/Block.png-15f66269f3cd78d005b497d0b93c74b0.ctex"
+uid="uid://bklxu2efmqkwv"
+path="res://.godot/imported/magenta_line.png-403e479983fd063bcfe4742b17f274d2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Game/Environment/Block.png"
-dest_files=["res://.godot/imported/Block.png-15f66269f3cd78d005b497d0b93c74b0.ctex"]
+source_file="res://Textures/Notes/magenta_line.png"
+dest_files=["res://.godot/imported/magenta_line.png-403e479983fd063bcfe4742b17f274d2.ctex"]
 
 [params]
 
