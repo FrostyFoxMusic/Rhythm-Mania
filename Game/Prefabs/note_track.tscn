@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://cmr0m86oyd84c"]
+
+[ext_resource type="Script" uid="uid://bjqstq8sykv61" path="res://Game/NoteTrack.cs" id="1_v7hdm"]
+[ext_resource type="PackedScene" uid="uid://d1d5fuyetpnok" path="res://Game/Prefabs/blue_dot.tscn" id="2_lyv6m"]
+[ext_resource type="PackedScene" uid="uid://btualj4l6nr0a" path="res://Game/Prefabs/green_dot.tscn" id="3_e2k5i"]
+[ext_resource type="PackedScene" uid="uid://o8448cidsfs8" path="res://Game/Prefabs/red_dot.tscn" id="4_f5xk5"]
+[ext_resource type="PackedScene" uid="uid://cllf42hvfbrph" path="res://Game/Prefabs/magenta_dot.tscn" id="5_ssvej"]
+[ext_resource type="PackedScene" uid="uid://ccfv4wrwuslus" path="res://Game/Prefabs/target_dot.tscn" id="6_baa7j"]
+
+[node name="NoteTrack" type="Node2D" unique_id=1294893921]
+script = ExtResource("1_v7hdm")
+blueDotPrefab = ExtResource("2_lyv6m")
+greenDotPrefab = ExtResource("3_e2k5i")
+redDotPrefab = ExtResource("4_f5xk5")
+magentaDotPrefab = ExtResource("5_ssvej")
+targetDotPrefab = ExtResource("6_baa7j")

@@ -1,10 +1,17 @@
-[gd_scene load_steps=2 format=3 uid="uid://c3yoan7c41rgj"]
+[gd_scene format=3 uid="uid://c3yoan7c41rgj"]
 
 [ext_resource type="Script" uid="uid://6c5vth264ool" path="res://Game/Level.cs" id="1_81xng"]
+[ext_resource type="Script" uid="uid://drty2ka8lt13h" path="res://Game/Conductor.cs" id="2_6phgx"]
+[ext_resource type="PackedScene" uid="uid://cmr0m86oyd84c" path="res://Game/Prefabs/note_track.tscn" id="3_6phgx"]
 
 [node name="Level" type="Node2D" unique_id=676662515]
+texture_filter = 1
+texture_repeat = 1
 script = ExtResource("1_81xng")
 
 [node name="Camera" type="Camera2D" parent="." unique_id=2009120221]
 
-[node name="NoteTrack" type="Node2D" parent="." unique_id=1369957379]
+[node name="Conductor" type="Node2D" parent="." unique_id=912651497]
+script = ExtResource("2_6phgx")
+noteTrackPrefab = ExtResource("3_6phgx")
+trackKeys = Array[int]([65, 83, 68, 70, 74, 75, 76, 59])

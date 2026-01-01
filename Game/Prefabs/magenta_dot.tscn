@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://cllf42hvfbrph"]
+
+[ext_resource type="Texture2D" uid="uid://devmrem2psvpe" path="res://Textures/Notes/magenta_dot.png" id="1_8i3kr"]
+
+[node name="MagentaDot" type="Node2D" unique_id=713771946]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=285530056]
+scale = Vector2(8, 8)
+texture = ExtResource("1_8i3kr")
